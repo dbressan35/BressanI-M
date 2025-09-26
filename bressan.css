@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: roboto;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* INÍCIO HEADER */
+
+.nav {
+    background-color: white;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    /* Z-INDEX COMO SE FOSSE UM NÍVEL DO "MANDAR PARA FRENTE DO SITE" */
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 28px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: rgb(57, 107, 158);
+    padding: 20px;
+}
+
+.nav-list a:hover {
+    color: rgb(17, 61, 104);
+}
+
+.nav img {
+    margin-left: 60px;
+    margin-top: 10px;
+    height: 70px;
+    width: 180px;
+}
+
+
+
+/* FIM HEADER */
+
+/* INÍCIO MAIN */
+
+.main {
+    width: 100%;
+    background-color: black;
+    height: calc(100vh - 90px);
+    background-image: url(imagens/banner-seguranca.jpg);
+    background-size: cover;
+    padding-left: 4%;
+    padding-top: 11%
+}
+
+.main h1 {
+    color: white;
+    font-size: 54px;
+}
+
+.main p {
+    font-size: 24px;
+    font-style: italic;
+    color: #05157d;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+main a {
+    text-decoration: none;
+    color: #05157d;
+}
+
+.botao-inicial {
+    cursor: pointer;
+    background-color: rgb(194, 221, 248);
+    border: 0;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.7s;
+    color: #05157d;
+}
+
+.botao-inicial:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+/* FIM MAIN */
+
+/* INÍCIO SOBRE */
+
+.sobre {
+    background-color: white;
+    width: 100%;
+    padding: 120px 13% 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.sobre p {
+    text-align: justify;
+}
+
+.sobre-nos {
+    max-width: 50%;
+    padding-right: 80px;
+}
+
+
+.sobre-nos img {
+    width: 140px;
+    height: 70px;
+    margin: 12px;
+}
+
+.imagem-sobre {
+    max-width: 500px;
+    height: 350px;
+
+}
+
+.imagem-sobre img {
+    width: 550px;
+    height: 370px;
+    border-radius: 8px;
+}
+
+.sobre-nos h2 {
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+
+/* FIM SOBRE */
+
+/* INÍCIO SERVIÇOS */
+
+.servicos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 0px 10px 0px;
+}
+
+.servicos h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.servicos p {
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.servico-carrossel {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* adapta no celular */
+    justify-content: center;
+    padding-bottom: 5 0px;
+    padding-bottom: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.seta:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.seta.esquerda {
+    left: 10px;
+}
+
+.seta.direita {
+    right: 10px;
+}
+
+.card p {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.botao-orcamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    margin-top: 18px;
+}
+
+.botao-orcamento button {
+    background-color: #05157d;
+    border: 0;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+    transition: 0.7s;
+
+}
+
+.botao-orcamento button:hover {
+    transform: scale(1.1);
+
+    cursor: pointer;
+}
+
+/* FIM PROJETOS */
+
+
+/* INÍCIO RODAPÉ */
+
+/* Rodapé principal */
+.footer {
+    background: #344e92;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+/* Colunas */
+.footer-col {
+    flex: 1 1 170px;
+    min-width: 220px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: black;
+}
+
+/* Links */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #05157d;
+}
+
+/* Contato */
+.footer-col .contact li {
+    color: #bbb;
+}
+
+/* Redes sociais */
+.social a {
+    margin-right: 10px;
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #fff;
+}
+
+/* Linha divisória */
+.footer hr {
+    margin: 30px auto;
+    border: 0;
+    border-top: 1px solid #333;
+    max-width: 1200px;
+}
+
+/* Copyright */
+.footer .copy {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* FIM RODAPE*/
+
+/* RESPONSIVIDADE EXTRA PARA CELULARES */
+@media (max-width: 1200px) {
+    .imagem-sobre img {
+        display: none;
+    }
+
+    .sobre-nos {
+        max-width: 100%;
+        padding: 0;
+    }
+    .sobre-nos img{
+        padding-left: 4%;
+    }
+
+}
+
+@media (max-width: 930px) {
+
+    /* HEADER */
+    .nav {
+
+        height: auto;
+        padding: 10px 0;
+        align-items: center;
+    }
+
+    .nav img {
+        margin: 10px;
+        width: 140px;
+        height: auto;
+    }
+
+    .nav-list {
+
+        margin: 10px;
+        padding: 10px 0;
+    }
+
+    .nav-list a {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    /* MAIN */
+    .main {
+        padding: 20% 5% 10% 5%;
+        text-align: center;
+        background-image: url(imagens/banner-seguranca3.png);
+    }
+
+    .main h1 {
+        font-size: 38px;
+    }
+
+    .main p {
+        font-size: 15px;
+        color: #05157d;
+        margin-top: 35px;
+        margin-bottom: 70px;
+    }
+
+    .botao-inicial {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    /* SOBRE */
+    .sobre {
+        padding: 40px 5%;
+    }
+
+    .sobre-nos {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .imagem-sobre img {
+        display: none;
+    }
+
+    .sobre-nos h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* SERVIÇOS */
+    .servicos h2 {
+        font-size: 24px;
+    }
+
+    .servicos p {
+        text-align: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* RODAPÉ */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 0px;
+    }
+
+    .footer-col {
+        min-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .sobre-nos img {
+        width: 90px;
+        height: 50px;
+        margin: 5px;
+    }
+}
+
+/* FIM RODAPE */
